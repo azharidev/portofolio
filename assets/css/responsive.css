@@ -1,0 +1,306 @@
+/* Android */
+.fd{
+  flex-direction: row;
+}
+
+.mobile {display: none;}
+
+.pc {display: block;}
+
+@media only screen and (min-device-width : 120px) and (max-device-width : 768px) {
+.ov1 {
+	overflow-y: scroll;
+}
+#tampilmenu {
+	text-transform: uppercase;
+	text-align: center;
+	justify-content: space-between;
+	display: none;
+	flex-direction: column;
+	position: fixed;
+	top: 100px;
+	left: 5px;
+	right: 5px;
+	bottom: 100px;
+
+	border-radius: 20px;
+	background-color: #fff;
+
+z-index: 999;
+}
+#tampilmenu p {
+	margin: auto;
+	color: black;
+	font-size: calc(10px + 2vw);
+	align-self: center;
+}
+
+.palsu:before {
+  content: '';
+  height: 3vh;
+  width: 3vh;
+  background-color: rgb(248,77,51);
+  position: absolute;
+  top: 100px;
+  left:9%;
+  opacity: 0.5;
+  z-index: 0;
+  animation: pindah 4s infinite;
+}
+.jumbotron:before {
+  content: '';
+  height: 3vh;
+  opacity: 0.8;
+  width: 3vh;
+  background-image: url('../img/anim3.png');
+  background-size: cover;
+  position: absolute;
+  top: 80px;
+  left:90%;
+  z-index: 0;
+  animation: pindah 2s infinite;
+}
+.jmt-right:before {
+  content: '';
+  height: 3vh;
+  opacity: 0.9;
+  width: 3vh;
+  background-image: url('../img/anim1.png');
+  background-size: cover;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  z-index: -1;
+  animation: pindah 3s infinite;
+}
+
+
+.typeText::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {opacity: 1;}
+  50% {opacity: 0;}
+}
+
+
+@keyframes pindah {
+  50%{
+    transform: rotate(45deg);
+  }
+    100%{
+    transform: rotate(90deg);
+  }
+
+  50% {
+   
+    transform: scale(1.2);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+.card-box p {
+	font-size: 4vw;
+	padding: 4vw;
+}
+.card-box span {
+	font-size: 3vw;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 85%;
+  width: auto;
+  padding: 8px;
+  font-size: 8px;
+}
+
+
+	.jumbotron p {
+	font-size: 1em;
+	line-height: 1.2em;
+}
+
+.mySlides {
+  padding: 20px;
+}
+
+
+
+q {
+	font-size: 3vw;
+}
+.author {
+	font-size: 3.4vw; 
+}
+
+
+
+.menubawah{
+	display: flex;
+	justify-content: center;
+}
+.menubawah div {
+	margin: auto;align-items: center;
+}
+	.menu-mobile {
+		padding: 10px;
+		position: fixed;
+		display: flex;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: black;
+		z-index: 999;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(111, 111,111, 0.3) 0px 18px 36px -18px inset;
+		z-index: 999;
+	}
+
+	.menu-mobile .menubawah small {
+		font-size: 11px;
+	}
+
+
+
+	.mobile {display: block;}
+	.pc {display: none;}
+	header ul li {
+	display: none;
+	}
+
+	.services {
+		margin-top: 100px;
+		padding: 20;
+	}
+.jumbotron button {
+	margin: 7px 8px 2px 0;
+	padding: 9px 11px;
+	color: white;
+	border: 1px solid var(--biru2);
+	font-size: 1.1em;
+	cursor: pointer;
+
+	background-color: transparent;
+	border-radius: 25px;
+}
+
+	/*JUMBOTRON OPEN*/
+.jumbotron {
+	position: relative;
+	flex-direction: column;
+	padding: 1vw;
+	margin-top: 100px;
+	display: flex;
+	height: 100vh;
+	font-size: 0.9em;
+}
+.jmt-right img {
+	width: 100%;
+}
+
+.jmt-left {
+	order: 2;
+	width: 100%;
+	height: 50%;
+}
+.jmt-right {
+	padding: 0px;
+	order: 1;
+	margin-top: auto;
+	width: 100%;
+}
+
+
+.fd{
+  flex-direction: column;
+}
+
+
+header {
+	margin-top: 10px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+
+
+
+}
+
+
+/*tablet*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+
+
+	
+.jumbotron button {
+	margin: 7px 8px 2px 0;
+	padding: 9px 11px;
+	color: white;
+	border: 1px solid var(--biru2);
+	font-size: 1.1em;
+	cursor: pointer;
+
+	background-color: transparent;
+	border-radius: 25px;
+}
+	/*JUMBOTRON OPEN*/
+.jumbotron {
+	position: relative;
+	flex-direction: rows;
+	padding: 1vw;
+	margin-top: 100px;
+	display: flex;
+	height: 100vh;
+	font-size: 0.9em;
+}
+.jmt-right img {
+	height: 100%;
+	width: 100%;
+}
+
+.jmt-left {
+	order: 1;
+	margin: auto;
+	width: 50%;
+}
+.jmt-right {
+	padding: 0px;
+	order: 2;
+	margin: auto;
+	width: 50%;
+}
+
+
+.fd{
+  flex-direction: column;
+}
+
+
+header {
+	margin-top: 10px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+
+}

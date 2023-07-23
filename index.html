@@ -1,0 +1,694 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+    
+/* spinner */
+
+.loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.spinner div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-top-color: #e63946;
+  border-radius: 50%;
+  animation: spinnerOne 1.2s linear infinite;
+}
+
+.spinner div:nth-child(2) {
+  border: 2px solid transparent;
+  border-bottom-color: #e63946;
+  animation: spinnerTwo 1.2s linear infinite;
+}
+
+@keyframes spinnerOne {
+  0% {
+    transform: rotate(0deg);
+    border-width: 4px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 4px;
+  }
+}
+@keyframes spinnerTwo {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 4px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
+  </style>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>My Portofolio</title>
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/animation.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body id="home">
+
+ <!-- spinner -->
+   <div class="loading" id="loading">
+      <div class="spinner">
+      <div></div>
+      <div></div>
+    </div>
+   </div>
+
+	<!-- header open -->
+	<header class="glow-on-hover">
+		<h2 class="typeText">Azhari Coding</h2>
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#portofolio">Portofolio</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#testimony">Testimony</a></li>
+			</ul>
+		</nav>
+		<div class="contact">
+			<a class="pc" href="#"><button>Contact Us</button></a>
+			<a class="mobile p-3" href="#" onclick="openmenu()"><i id="openmenu" class="fas fa-2x fa-bars"></i></a>
+		</div>
+	</header>
+	<!-- header close -->
+
+	<div id="tampilmenu">
+		<p >HOME</p>
+		<p>Projeck</p>
+		<p>About</p>
+		<p>Portofolio</p>
+		<p>Contact Us</p>
+
+	</div>
+
+	<div class="palsu"></div>
+	<!-- jumbotron open	 -->
+		<section class="jumbotron">
+			<div class="jmt-left">
+				<h1  class="orange">Hy, I Am</h1>
+				<h1 class="putih">Azhari Coding</h1>
+				<p class="pt-2 op7">Saya adalah <strong>full stack web developer</strong> yang sudah berkecimpung di dunia website dan teknologi sejak tahun <strong>2018.</strong> Hari harian saya adalah mengerjakan project seperti <i>ui ux desain, web development dan keamanan website</i></p>
+				<button onclick="hereMe()">Hire Me</button><button onclick="downloadCv()">Download CV</button>
+
+				<div class="mt-3 putih row">
+					<div class="col-2">
+						<a target="_blank" href="https://web.facebook.com/azhari.coding/"><i class="fab fa-2x fa-facebook"></i></a>
+					</div>
+					<div class="col-2">
+						<a target="_blank" href="https://www.instagram.com/azharicoding/"><i class="fab fa-2x fa-instagram-square"></i></a>
+					</div>
+					<div class="col-2">
+						<a target="_blank" href="https://www.youtube.com/c/AzhariCoding"><i class="fab fa-2x fa-youtube"></i></a>
+					</div>
+					<div class="col-2">
+						<a target="_blank" href="https://wa.me/6289501427163"><i class="fab fa-2x fa-whatsapp"></i></a>
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="jmt-right">
+				<img src="assets/img/azharijwd.png">
+			</div>
+		</section>
+	<!-- jumbotron close -->
+
+
+	<!-- service open -->
+	<center>
+	<div class="services jcc tc row2 r img">
+		<div class="row2 col-6 p-1 aa">
+			
+			<div class="m-auto p-2 tc col-8">
+				<h2><span id="client">0</span></h2>
+				<h4><small>Client</small></h4>
+			</div>
+		</div>
+
+		<div class="row2 col-6  p-1 aa">
+			
+			<div class="m-auto putih p-2 tc col-8">
+				<h2><span id="projeck">0</span></h2>
+				<h4><small>Project</small></h4>
+			</div>
+		</div>
+	</div></center>
+	<!-- service close -->
+
+
+<!-- saya kerjakan open -->
+
+
+<section class="menu-mobile putih mobile">
+	<div class="menubawah">
+		<div class="menu1 tc" style="color:#f3722c;" ><a style="color:#f3722c;"  href="#"><i class="fas fa-home"></i></a> <br><small style="font-size: 2.1vw;">HOME</small></div>
+		<div class="menu1 tc"><a href="#"><i class="fas fa-cube"></i></a> <br><small  style="font-size: 2.1vw;">PROJECK</small></div>
+		<div class="menu1 tc"><a href="#"><i class="fas fa-code"></i></a> <br><small  style="font-size: 2.1vw;">TOOLS</small></div>
+		<div class="menu1 tc"><a href="#"><i class="fas fa-user-tie"></i></a> <br><small  style="font-size: 2.1vw;">ABOUT</small></div>
+	</div>
+</section>
+
+<!-- saya kerjakan close -->
+
+
+
+<!-- services open -->
+
+	<div class="card-box hijau2 " id="services">
+		<br><br><br><br>
+			<center><h1 class="tc putih mt-4" data-aos="fade-up" data-aos-duration="500">SERVICES</h1> <p class="putih"  data-aos="fade-up" data-aos-duration="600">Siap melayani berbagai kategori website, web design,web application, desain dan keamanan web</p></center>
+
+			<div class="row2 fw jcc p-3 mx-auto">
+				
+				<div class="col-12 col-md-3 mx-auto p-3 mb-2 row2 card" data-aos="fade-up" data-aos-duration="600">
+					<div class="col-3 row2 justify-content-center mx-auto">
+							
+							<div style="margin: auto 0;">
+								<i class="fas fa-tv fa-3x"></i>
+							</div>
+						</div>
+					<div class="col-9 p-3 m-auto">
+							<div class="m-auto pl-1">
+							<h4 class="mb-1">UI/UX Desainer</h4>
+							<span>Mendesain UI/UX aplikasi atau website</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-3 mx-auto p-3 mb-2 row2 card" data-aos="fade-up" data-aos-duration="800">
+					<div class="col-3 row2 justify-content-center mx-auto">
+							
+							<div style="margin: auto 0;">
+								<i class="fas fa-code fa-3x"></i>
+							</div>
+						</div>
+					
+					<div class="col-9 p-3 m-auto">
+							<div class="m-auto pl-1">
+							<h4 class="mb-1">Web Development</h4>
+							<span>Membuat aplikasi berbasis website</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-3 mx-auto p-3 mb-2 row2 card" data-aos="fade-up" data-aos-duration="800">
+					<div class="col-3 row2 justify-content-center mx-auto">
+							
+							<div style="margin: auto 0;">
+								<i class="fas fa-bug fa-3x"></i>
+							</div>
+						</div>
+					
+					<div class="col-9 p-3 m-auto">
+							<div class="m-auto pl-1">
+							<h4 class="mb-1">Web Security</h4>
+							<span>Amankan Website Anda Dari Virus dan Hacker</span>
+						</div>
+					</div>
+				</div>
+
+				
+
+			</div>
+
+
+			
+	</div>
+<!-- services close -->
+
+
+<!-- skill open -->
+
+
+
+
+
+	<div class="card-box skills mt-5" id="skills">
+		<br><br><br><br>
+		<div class="row2  flex-column">
+			<div class="col-12 col-sm-8 m-auto putih tc">
+				<h1 data-aos="fade-up " data-aos-duration="1200" class="tc">MY SKILLS</h1>
+			</div>
+			<div class="col-12 col-sm-8 m-auto tc">
+				<p class="p-3"  data-aos="fade-right" data-aos-duration="1300">Berikut Beberapa Software Sekaligus Skill yang saya miliki untuk saat ini</p>
+			</div>
+		</div>
+
+
+
+			<div class="row2 jcc p-2" data-aos="fade-up" data-aos-duration="1000">
+				<div class="col-md-1 col-2 mb-2"><img src="assets/img/skill1.png" alt="" style="width:100%"></div>
+				<div class="col-md-1 col-2 mb-2"><img src="assets/img/skill2.png" alt="" style="width:100%"></div>
+				<div class="col-md-1 col-2 mb-2"><img src="assets/img/skill3.png" alt="" style="width:100%"></div>
+				<div class="col-md-1 col-2 mb-2"><img src="assets/img/skill4.png" alt="" style="width:100%"></div>
+				<div class="col-md-1 col-2 mb-2"><img src="assets/img/skill5.png" alt="" style="width:100%"></div>
+			</div>
+
+			<div class="row2 jcc p-2" data-aos="fade-up"  data-aos-duration="1000">
+				<div class="col-md-1 col-2 mb-2"><img src="assets/img/skill6.png" alt="" style="width:100%"></div>
+				<div class="col-md-1 col-2 mb-2"><img src="assets/img/skill7.png" alt="" style="width:100%"></div>
+				<div class="col-md-1 col-2 mb-2"><img src="assets/img/skill8.png" alt="" style="width:100%"></div>
+				<div class="col-md-1 col-2 mb-2"><img src="assets/img/skill9.png" alt="" style="width:100%"></div>
+			</div>
+
+			<div class="row2 jcc p-2" data-aos="fade-up"  data-aos-duration="1000">
+				<div class="col-md-1 col-2 mb-2"><img src="assets/img/skill10.png" alt="" style="width:100%"></div>
+				<div class="col-md-1 col-2 mb-2"><img src="assets/img/skill11.png" alt="" style="width:100%"></div>
+				<div  id="portofolio" class="col-md-1 col-2 mb-2"><img src="assets/img/skill12.png" alt="" style="width:100%"></div>
+			</div>
+
+			<div class="row2 jcc p-2" data-aos="fade-up"  data-aos-duration="1000">
+				<div class="col-md-1 col-2 mb-2"><img src="assets/img/skill13.png" alt="" style="width:100%"></div>
+			</div>
+
+
+
+			
+			
+	</div>
+<!-- skill close -->
+
+
+	<div class="projeck putih mt-100" > 
+		<h1  data-aos="fade-up putih" data-aos-duration="1200" class="tc">PORTOFOLIO</h1>
+
+
+		<div class="row2 fw jcsb p-2">
+
+			<div class="col-12 col-sm-6 col-md-3 p-3" data-aos="fade-up" data-aos-duration="600">
+				<div class="card p-2">
+					<img src="assets/img/pp1.jpg" alt="" style="width:100%">
+					<h4 class="p-1">WEBSITE PENGHITUNG POIN GAME TURNAMENT DAN SCRIM </h4>
+					<p class="p-1"><small>Website yang digunakan oleh para gamers dalam menghitung poin secara online</small></p>
+					<a style="display: block; margin-top: 10px;" href="https://poingamers.com/" target="_blank" class="p-1">More Detail <i style=" vertical-align: middle;" class="fas fa-angle-double-right"></i></a>
+				</div>
+			</div>
+
+
+
+			<div class="col-12 col-sm-6 col-md-3 p-3" data-aos="fade-up" data-aos-duration="900">
+				<div class="card p-2">
+					<img src="assets/img/pp2.jpg" alt="" style="width:100%">
+					<h4 class="p-1">SISTEM LAYANAN MASYARAKAT INFORMATIF SAMBAS (SI-LAMIS)</h4>
+					<p class="p-1"><small>Sebuah website yang digunakan di kominfo, yang saya buat ketika saya magang batch pertama</small></p>
+					<a style="display: block; margin-top: 10px;" href="https://instechpedia.id/" target="_blank" class="p-1">More Detail <i style=" vertical-align: middle;" class="fas fa-angle-double-right"></i></a>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-6 col-md-3 p-3" data-aos="fade-up" data-aos-duration="1200">
+				<div class="card p-2">
+					<img src="assets/img/pp3.jpg" alt="" style="width:100%">
+					<h4 class="p-1">BLOG WEBSITE - instechpedia.id</h4>
+					<p class="p-1"><small>Website pribadi untuk berbagi tutorial terkait ilmu teknologi dan website</small></p>
+					<a style="display: block; margin-top: 10px;" href="https://instechpedia.id/" target="_blank" class="p-1">More Detail <i style=" vertical-align: middle;" class="fas fa-angle-double-right"></i></a>
+				</div>
+			</div>
+
+
+			<div class="col-12 col-sm-6 col-md-3 p-3" data-aos="fade-up" data-aos-duration="1700">
+				<div class="card p-2">
+					<img src="assets/img/pp4.jpg" alt="" style="width:100%">
+					<h4 class="p-1">Aplikasi Penerimaaan Mahasiswa Magang</h4>
+					<p class="p-1"><small></small></p>
+					<a style="display: block; margin-top: 10px;" href="https://youtu.be/zGAceUR6JU4" target="_blank" class="p-1">More Detail <i style=" vertical-align: middle;" class="fas fa-angle-double-right"></i></a>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div class="row2 jcc putih tc">
+			<div  data-aos="fade-right" data-aos-duration="1100">
+				<button onclick="link()" id="about">SEE MORE   &nbsp;<i  class="fas fa-angle-double-right"></i></button>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<section class="about">
+	<h1 data-aos="fade-up" data-aos-duration="600" class="tc mt-100">ABOUT</h1>
+	<div class="row2 fd">
+		<div class="col-12 col-md-5" data-aos="fade-up" data-aos-duration="600">
+			<img src="assets/img/y2.png" alt="" style="width:100%">
+		</div>
+
+		<div class="col-12 col-md-7" >
+			<div class="row2 about3 ov1">
+				<button id="btnabout1" class="btn-active" data-aos="fade-up" data-aos-duration="600" onclick="about(1)">BIO</button>
+				<button id="btnabout2"   data-aos="fade-up" data-aos-duration="700" onclick="about(2)">EDUCATION</button>
+			</div>
+
+				<div id="education" style="display: none;">
+				
+			<div class="row2 ov1" data-aos="fade-up" data-aos-duration="1200" class="bio"> 
+				<table border="0" width="100%" cellpadding="20" cellspacing="20">
+					<tr>
+						<td>SD</td><td>:</td><td>SDN 14 ARUNG KUANG</td>
+					</tr>
+
+					<tr>
+						<td>SMP</td><td>:</td><td>SMPN 1 TANGARAN</td>
+					</tr>
+
+					<tr>
+						<td>SMK</td><td>:</td><td>SMKN 1 TANGARAN</td>
+					</tr>
+					<tr>
+						<td>UNIVERSITAS</td><td>:</td><td>POLITEKNIK NEGERI SAMBAS</td>
+					</tr>
+				</table>
+			</div>
+			</div>
+
+			<div id="bio">
+				<div data-aos="fade-up" data-aos-duration="1100" class="bio">
+				<p>Hello, Saya azhari dan saat ini sedang berkuliah di politeknik negeri sambas angkatan 2019. Profesi saya sebagai full stack web developer. Saya sangat tertarik di dunia teknologi sejak tahun 2015 yaitu saat di bangku 3 smp. </p>
+				<br>
+				<p>Untuk saat ini saya lebih menyukai profesi sebagai web design, web developer dan juga web security yaitu bagian keamanan di website</p>
+			</div>
+
+			<div class="row2 ov1" data-aos="fade-up" data-aos-duration="1200" class="bio"> 
+				<table border="0" width="100%" cellpadding="20" cellspacing="20">
+					<tr>
+						<td>Umur</td><td>:</td><td>21 Tahun</td>
+					</tr>
+
+					<tr>
+						<td>Email</td><td>:</td><td>azhari123777@gmail.com</td>
+					</tr>
+
+					<tr>
+						<td>Phone</td><td>:</td><td>0895 0142 7163</td>
+					</tr>
+					<tr>
+						<td>Alamat</td><td>:</td><td>Sambas, Kalimantan Barat Indonesia</td>
+					</tr>
+				</table>
+			</div>
+			</div>
+
+			<div data-aos="fade-up" data-aos-duration="1400" class="row2 p-3 btn-contact">
+				<button class="col-12 col-md-5" onclick="hereMe()">Contact Me</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<section>
+	
+
+
+	<!-- Slideshow container -->
+<div class="slideshow-container mt-100 p-3" id="testimony">
+
+		<h1 class="tc putih p-3" data-aos="fade-up" data-aos-duration="800">TESTIMONY</h1>
+
+  <!-- Full-width slides/quotes -->
+  <div class="mySlides" data-aos="fade-up" data-aos-duration="1700">
+    <img src="assets/testi/1.jpg" alt="" style="max-width:500px; width:80%">
+  </div>
+
+  <div class="mySlides card">
+    <img src="assets/testi/2.jpg" alt="" style="max-width:500px; width:80%">
+  </div>
+
+  <div class="mySlides card">
+    <!-- <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+    <p class="author">- Thomas A. Edison</p> -->
+    <img src="assets/testi/3.jpg" alt="" style="max-width:500px; width:80%">
+  </div>
+
+  <div class="mySlides card">
+    <!-- <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+    <p class="author">- Thomas A. Edison</p> -->
+    <img src="assets/testi/4.jpg" alt="" style="max-width:500px; width:80%">
+  </div>
+
+
+  <div class="mySlides card">
+    <!-- <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+    <p class="author">- Thomas A. Edison</p> -->
+    <img src="assets/testi/5.jpg" alt="" style="max-width:500px; width:80%">
+  </div>
+
+  <div class="mySlides card">
+    <!-- <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+    <p class="author">- Thomas A. Edison</p> -->
+    <img src="assets/testi/6.jpg" alt="" style="max-width:500px; width:80%">
+  </div>
+
+  <div class="mySlides card">
+    <!-- <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+    <p class="author">- Thomas A. Edison</p> -->
+    <img src="assets/testi/7.jpg" alt="" style="max-width:500px; width:80%">
+  </div>
+
+  <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots/bullets/indicators -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
+
+
+</section>
+
+<section>
+	<div class="footer" data-aos="fade-up" data-aos-duration="1100">
+		<div class="row jcc mb-3">
+			<div class="col-12 mb-2 col-sm-6 col-md-3">
+				<h1>About </h1>
+				<p class="white p-3 op9">Saya adalah <strong>full stack web developer</strong> yang sudah berkecimpung di dunia website dan teknologi sejak tahun <strong>2017.</strong></p>
+
+				<p class="white p-3 op9"> Hari harian saya adalah mengerjakan project seperti ui ux desain, web development dan keamanan web</p>
+			</div>
+
+			<div class="col-12 mb-2 col-sm-6 col-md-3">
+				<h1>Quick Links</h1>
+				<ul class="p-3">
+					<li>Home</li>
+					<li>About</li>
+					<li>Projeck</li>
+					<li>Skill</li>
+				</ul>
+			</div>
+
+			<div class="col-12 mb-2 col-sm-6 col-md-3">
+				<h1>Social Media</h1>
+
+				<table  class="white p-3" width="100%" border="0">
+					<tr>
+						<td>
+							<a href="https://web.facebook.com/azhari.coding/"><i class="fab fa-2x fa-facebook-square"></i></a>
+						</td>
+
+						<td>
+							<a href="https://www.youtube.com/c/AzhariCoding"><i class="fab  fa-2x fa-youtube"></i></a>
+						</td>
+
+						<td>
+							<a href="https://wa.me/6289501427163"><i class="fab  fa-2x fa-whatsapp"></i></a>
+						</td>
+
+						<td>
+							<a href="https://www.instagram.com/azharicoding/"><i class="fab fa-2x fa-instagram-square"></i></a>
+						</td>
+
+					</tr>
+				</table>
+				<p class="white p-3">Kunjungi Akun media sosial yang tersedia untuk terhubung dengan saya</p>
+			</div>
+
+			<div class="col-12 mb-2 col-sm-6 col-md-3">
+				<h1>Contact</h1>
+				<ul class="p-3">
+					<li>Simpang Empat, Sambas, Kalimantan Barat</li>
+					<li>Phone : 0895-0142-7163</li>
+					<li>Email : azhari123777@gmail.com</li>
+					
+				</ul>
+			</div>
+		</div>
+
+
+		<p class="tc p-5" style="color: white"><small>Copyright By Azhari 2022</small></p>
+	</div>
+</section>
+<script>
+	var loading = document.getElementById('loading');
+	setTimeout(function(){
+		loading.style.display = "none";
+	},1700)
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/js/my.js"></script>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
+AOS.init({
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 100, // values from 0 to 3000, with step 50ms
+
+  once: true, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+});
+
+
+
+
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+	 
+	var typeText = document.querySelector(".typeText")
+var textToBeTyped = "Azhari Coding"
+var index = 0, isAdding = true
+
+function playAnim() {
+  setTimeout(function () {
+    // set the text of typeText to a substring of
+    // the textToBeTyped using index.
+    typeText.innerText = textToBeTyped.slice(0, index)
+    if (isAdding) {
+      // adding text
+      if (index > textToBeTyped.length) {
+        // no more text to add
+        isAdding = false
+        //break: wait 2s before playing again
+        setTimeout( function () {
+          playAnim()
+        }, 6000)
+        return
+      } else {
+        // increment index by 1
+        index++
+      }
+    } else {
+      // removing text
+      if (index === 0) {
+        // no more text to remove
+        isAdding = true
+      } else {
+        // decrement index by 1
+        index--
+      }
+    }
+    // call itself
+    playAnim()
+  }, 120)
+}
+// start animation
+playAnim()
+
+function link(){
+	location.href = "https://instechpedia.id/project";
+}
+
+
+function hereMe(){
+	location.href = "https://wa.me/6289501427163";
+
+}
+
+function downloadCv() {
+	window.open('azhari_dev_portofolio.pdf', '_blank');
+}
+
+
+
+
+</script>
+</body>
+</html>
